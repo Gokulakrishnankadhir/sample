@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            color: #333;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #status {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        #qrCodeContainer {
+            margin-top: 20px;
+            display: none; /* Initially hide the QR code container */
+        }
+        #qrCodeContainer img {
+            max-width: 100%; /* Make the QR code responsive */
+        }
+    </style>
+</head>
+<body>
+    <h2>Create Delivery Request</h2>
+    <form id="deliveryForm">
+        <input type="text" id="destination" placeholder="Destination" required>
+        <input type="number" id="units" placeholder="Units" required>
+        <input type="text" id="drugType" placeholder="Drug Type" required>
+        <button type="submit" id="confirmButton">Confirm Request</button>
+    </form>
+
+    <p id="status"></p>
+
+    <div id="qrCodeContainer">
+        <h3>QR Code:</h3>
+        <img id="qrCodeImage" alt="QR Code for Transaction" />
+    </div>
+
+    <!-- Include Web3.js for blockchain interaction -->
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+    <script src="{{ url_for('static', filename='create_nft.js') }}"></script>
+</body>
+</html>
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            color: #333;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #status {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        #qrCodeContainer {
+            margin-top: 20px;
+            display: none; /* Initially hide the QR code container */
+        }
+        #qrCodeContainer img {
+            max-width: 100%; /* Make the QR code responsive */
+        }
+    </style>
+</head>
+<body>
+    <h2>Create Delivery Request</h2>
+    <form id="deliveryForm">
+        <input type="text" id="destination" placeholder="Destination" required>
+        <input type="number" id="units" placeholder="Units" required>
+        <input type="text" id="drugType" placeholder="Drug Type" required>
+        <button type="submit" id="confirmButton">Confirm Request</button>
+    </form>
+
+    <p id="status"></p>
+
+    <div id="qrCodeContainer">
+        <h3>QR Code:</h3>
+        <img id="qrCodeImage" alt="QR Code for Transaction" />
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers/dist/ethers.min.js"></script>
+    <script src="{{ url_for('static', filename='create_nft.js') }}"></script>
+</body>
+</html>
+-->
